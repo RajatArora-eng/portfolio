@@ -486,8 +486,15 @@ section {
     white-space: nowrap;
 }
 
-.status-badge.completed {
+.status-badge.live {
     background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.project-links {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
 }
 
 .status-badge.fullstack {

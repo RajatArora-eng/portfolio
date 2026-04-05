@@ -1,6 +1,6 @@
 // Typing animation
 const typingText = document.querySelector('.typing-text');
-const techStack = ['Java', 'Spring Boot', 'REST APIs', 'Hibernate'];
+const techStack = ['Spring Boot', 'WebSockets + STOMP', 'JWT Auth', 'Hibernate / JPA', 'REST APIs', 'React'];
 let techIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

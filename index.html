@@ -34,8 +34,8 @@
                 <p class="tagline">Full Stack Developer (Spring Boot + React)</p>
                 <p class="intro">Building scalable backend systems and real-time applications. Computer Science undergraduate with strong fundamentals in DSA, OOP, DBMS, OS, and Computer Networks. Solved <strong>100+ DSA problems on LeetCode</strong>. Experienced in full stack development with Spring Boot and React, building real-time systems and REST APIs.</p>
                 <div class="cta-buttons">
-                    <a href="assets/resume/vishal_intern_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Resume</a>
-                    <a href="assets/resume/vishal_intern_resume.pdf" download="Vishal_Sharma_Resume.pdf" class="btn btn-secondary">Download Resume</a>
+                    <a href="assets/resume/Vishal_Resume (1).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Resume</a>
+                    <a href="assets/resume/Vishal_Resume (1).pdf" download="Vishal_Sharma_Resume.pdf" class="btn btn-secondary">Download Resume</a>
                     <a href="#projects" class="btn btn-tertiary">View Projects</a>
                     <a href="#contact" class="btn btn-tertiary">Contact Me</a>
                 </div>
@@ -52,8 +52,9 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>Passionate about <strong>full stack development</strong> with a strong backend focus. Experienced in building REST APIs with Spring Boot and developing real-time systems using WebSockets. Hands-on knowledge of Hibernate, Spring Data JPA, MVC architecture, and JWT authentication.</p>
-                <p>Solved <strong>100+ DSA problems on LeetCode</strong>, demonstrating strong problem-solving skills. Expanding into frontend development with <strong>React and JavaScript</strong> to build complete, end-to-end applications. Actively seeking <strong>backend/full stack internship opportunities</strong> to contribute to real-world projects and grow as a developer.</p>
+                <p>Passionate about <strong>full stack development</strong> with a strong backend focus. Experienced in building REST APIs with Spring Boot and developing real-time systems using <strong>WebSockets + STOMP protocol</strong>. Hands-on with Hibernate, Spring Data JPA, Spring Security, MVC architecture, and <strong>JWT authentication</strong>.</p>
+                <p>Solved <strong>100+ DSA problems on LeetCode</strong>, demonstrating strong problem-solving skills. Expanding into frontend development with <strong>React and JavaScript</strong> to build complete, end-to-end applications. Deployed projects using <strong>Vercel (frontend), Render (backend), and Neon DB (PostgreSQL)</strong>.</p>
+                <p>Actively seeking <strong>backend/full stack internship opportunities</strong> to contribute to real-world projects and grow as a developer.</p>
             </div>
         </div>
     </section>
@@ -107,6 +108,10 @@
                         <span class="skill-badge"><i class="fas fa-leaf"></i> Spring Boot</span>
                         <span class="skill-badge"><i class="fas fa-plug"></i> REST APIs</span>
                         <span class="skill-badge"><i class="fas fa-bolt"></i> WebSockets</span>
+                        <span class="skill-badge">STOMP Protocol</span>
+                        <span class="skill-badge">Hibernate / JPA</span>
+                        <span class="skill-badge">Spring Security</span>
+                        <span class="skill-badge">Spring Data JPA</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -115,16 +120,22 @@
                     <div class="skill-badges">
                         <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
                         <span class="skill-badge"><i class="fas fa-leaf"></i> MongoDB</span>
+                        <span class="skill-badge">Neon DB (PostgreSQL)</span>
+                        <span class="skill-badge">Spring Data JPA</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Tools</h3>
+                    <h3>Tools & Deployment</h3>
                     <div class="skill-badges">
                         <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
                         <span class="skill-badge"><i class="fab fa-github"></i> GitHub</span>
                         <span class="skill-badge"><i class="fas fa-paper-plane"></i> Postman</span>
                         <span class="skill-badge"><i class="fas fa-cube"></i> Maven</span>
+                        <span class="skill-badge">Vercel</span>
+                        <span class="skill-badge">Render</span>
+                        <span class="skill-badge">IntelliJ IDEA</span>
+                        <span class="skill-badge">VS Code</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -133,9 +144,12 @@
                     <div class="skill-badges">
                         <span class="skill-badge">OOP</span>
                         <span class="skill-badge">DSA</span>
-                        <span class="skill-badge">MVC</span>
-                        <span class="skill-badge">JWT Auth</span>
+                        <span class="skill-badge">MVC Architecture</span>
+                        <span class="skill-badge">JWT Authentication</span>
                         <span class="skill-badge">Exception Handling</span>
+                        <span class="skill-badge">Role-Based Access Control</span>
+                        <span class="skill-badge">Real-Time Messaging</span>
+                        <span class="skill-badge">RESTful Design</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -160,19 +174,29 @@
                         <h3><i class="fas fa-shopping-cart"></i> E-Commerce Storefront</h3>
                         <div class="badge-group">
                             <span class="status-badge fullstack">Full Stack</span>
+                            <span class="status-badge live">Live</span>
                         </div>
                     </div>
-                    <p class="project-desc">A full stack e-commerce platform with product management, shopping cart, and order tracking powered by Spring Boot REST APIs and a React frontend.</p>
+                    <p class="project-desc">A full stack e-commerce platform with JWT-secured authentication, product management, shopping cart, and order tracking — powered by Spring Boot REST APIs and a React frontend deployed on Vercel + Render.</p>
                     <ul class="project-features">
-                        <li>Product listing and filtering</li>
-                        <li>Shopping cart functionality (add/remove/update items)</li>
-                        <li>Order placement and order tracking system</li>
-                        <li>REST API integration between React frontend and Spring Boot backend</li>
+                        <li>JWT-based user authentication &amp; role-based access control</li>
+                        <li>Product listing, search, and category filtering</li>
+                        <li>Shopping cart — add, remove, update quantity</li>
+                        <li>Order placement and real-time order tracking</li>
+                        <li>Spring Boot REST API consumed by React frontend</li>
+                        <li>Hibernate + Spring Data JPA for ORM and DB operations</li>
+                        <li>Frontend deployed on Vercel, Backend on Render, DB on Neon (PostgreSQL)</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-tag"><i class="fab fa-react"></i> React</span>
                         <span class="tech-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
-                        <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="tech-tag"><i class="fas fa-database"></i> MySQL / Neon DB</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Hibernate</span>
+                        <span class="tech-tag">Vercel + Render</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sharmaVishal2" target="_blank" class="btn btn-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -180,19 +204,27 @@
                         <h3><i class="fas fa-comments"></i> Real-Time Chat Application</h3>
                         <div class="badge-group">
                             <span class="status-badge realtime">Real-Time</span>
+                            <span class="status-badge live">Live</span>
                         </div>
                     </div>
-                    <p class="project-desc">A scalable real-time messaging application using WebSockets with MongoDB for message persistence and concurrent user session handling.</p>
+                    <p class="project-desc">A scalable real-time messaging application using WebSockets + STOMP protocol with Spring Boot backend, MongoDB for message persistence, and concurrent multi-user session handling.</p>
                     <ul class="project-features">
-                        <li>Real-time messaging using WebSockets</li>
-                        <li>Online/offline user status tracking</li>
+                        <li>Real-time bidirectional messaging via WebSockets + STOMP</li>
+                        <li>Online/offline user presence tracking</li>
                         <li>Message persistence using MongoDB</li>
-                        <li>Concurrent user handling</li>
+                        <li>Concurrent multi-user session handling</li>
+                        <li>Spring Boot WebSocket message broker configuration</li>
+                        <li>Deployed on Render (backend) with Neon DB integration</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
                         <span class="tech-tag"><i class="fas fa-bolt"></i> WebSockets</span>
+                        <span class="tech-tag">STOMP</span>
                         <span class="tech-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                        <span class="tech-tag">Render</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sharmaVishal2" target="_blank" class="btn btn-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
