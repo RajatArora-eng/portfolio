@@ -1,114 +1,59 @@
-// Typing animation
-const typingText = document.querySelector('.typing-text');
-const techStack = ['Spring Boot', 'WebSockets + STOMP', 'JWT Auth', 'Hibernate / JPA', 'REST APIs', 'React'];
-let techIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function type() {
-    const currentTech = techStack[techIndex];
-    
-    if (isDeleting) {
-        typingText.textContent = currentTech.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typingText.textContent = currentTech.substring(0, charIndex + 1);
-        charIndex++;
-    }
-    
-    if (!isDeleting && charIndex === currentTech.length) {
-        setTimeout(() => isDeleting = true, 2000);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        techIndex = (techIndex + 1) % techStack.length;
-    }
-    
-    const typingSpeed = isDeleting ? 50 : 100;
-    setTimeout(type, typingSpeed);
-}
-
-setTimeout(type, 1000);
-
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinks.classList.toggle('open');
 });
 
-// Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Smooth scroll with offset for fixed navbar
+// Smooth scroll with navbar offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
-            const offset = 80;
-            const targetPosition = target.offsetTop - offset;
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: target.offsetTop - 65, behavior: 'smooth' });
         }
     });
 });
 
 // Active nav link on scroll
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 100) {
+        if (window.scrollY >= section.offsetTop - 120) {
             current = section.getAttribute('id');
         }
     });
-
     navItems.forEach(item => {
         item.classList.remove('active');
-        if (item.getAttribute('href').slice(1) === current) {
+        if (item.getAttribute('href') === '#' + current) {
             item.classList.add('active');
         }
     });
 });
 
-// Contact form submission
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
-});
-
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+// Contact form
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        btn.textContent = 'Message Sent!';
+        btn.disabled = true;
+        setTimeout(() => {
+            btn.textContent = 'Send Message';
+            btn.disabled = false;
+            contactForm.reset();
+        }, 3000);
     });
-}, observerOptions);
-
-// Observe all cards and sections
-document.querySelectorAll('.skill-card, .project-card, .career-card, .education-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+}
