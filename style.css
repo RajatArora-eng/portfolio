@@ -380,9 +380,9 @@ section { padding: 6rem 0; }
     gap: 0.5rem;
 }
 .tag {
-    background: rgba(251,146,60,0.1);
-    border: 1px solid rgba(251,146,60,0.3);
-    color: #fb923c;
+    background: rgba(168,139,250,0.1);
+    border: 1px solid rgba(168,139,250,0.25);
+    color: #a78bfa;
     padding: 0.28rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -390,18 +390,18 @@ section { padding: 6rem 0; }
     transition: border-color 0.2s, background 0.2s;
 }
 .tag:hover {
-    background: rgba(251,146,60,0.18);
-    border-color: #fb923c;
+    background: rgba(168,139,250,0.18);
+    border-color: #a78bfa;
 }
 
 .tag-deploy {
-    background: rgba(251,146,60,0.1);
-    border-color: rgba(251,146,60,0.3);
-    color: #fb923c;
+    background: rgba(168,139,250,0.1);
+    border-color: rgba(168,139,250,0.25);
+    color: #a78bfa;
 }
 .tag-deploy:hover {
-    background: rgba(251,146,60,0.18);
-    border-color: #fb923c;
+    background: rgba(168,139,250,0.18);
+    border-color: #a78bfa;
 }
 
 /* ─── PROJECTS ─────────────────────────────────────────── */
