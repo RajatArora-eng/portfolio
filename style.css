@@ -240,19 +240,24 @@ section { padding: 6rem 0; }
     bottom: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%);
-    background: var(--bg-card);
+    background: #1c2333;
     border: 1px solid var(--border);
-    color: var(--text-1);
-    font-size: 0.72rem;
+    color: #e6edf3;
+    font-size: 0.7rem;
     font-weight: 500;
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
+    padding: 0.2rem 0.55rem;
+    border-radius: 5px;
     white-space: nowrap;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.15s;
+    visibility: hidden;
+    transition: opacity 0.15s, visibility 0.15s;
+    z-index: 10;
 }
-.tooltip-wrap:hover .tooltip { opacity: 1; }
+.tooltip-wrap:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
 .profile-ring {
     width: 260px;
     height: 260px;
@@ -375,23 +380,29 @@ section { padding: 6rem 0; }
     gap: 0.5rem;
 }
 .tag {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    color: var(--text-2);
+    background: rgba(88,166,255,0.07);
+    border: 1px solid rgba(88,166,255,0.2);
+    color: var(--accent);
     padding: 0.28rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
-    transition: border-color 0.2s, color 0.2s;
+    transition: border-color 0.2s, background 0.2s;
 }
-.tag:hover { border-color: var(--accent); color: var(--accent); }
+.tag:hover {
+    background: rgba(88,166,255,0.14);
+    border-color: var(--accent);
+}
 
 .tag-deploy {
-    border-color: rgba(63,185,80,0.4);
-    color: var(--accent-2);
-    background: rgba(63,185,80,0.06);
+    background: rgba(88,166,255,0.07);
+    border-color: rgba(88,166,255,0.2);
+    color: var(--accent);
 }
-.tag-deploy:hover { border-color: var(--accent-2); }
+.tag-deploy:hover {
+    background: rgba(88,166,255,0.14);
+    border-color: var(--accent);
+}
 
 /* ─── PROJECTS ─────────────────────────────────────────── */
 /* Featured */
@@ -558,7 +569,7 @@ section { padding: 6rem 0; }
 
 /* Shared project stack */
 .project-stack { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.25rem; }
-.featured-info .project-stack { margin-top: 1rem; }
+.featured-info .project-stack { margin-top: 1.25rem; }
 .stack-tag {
     background: rgba(255,255,255,0.04);
     border: 1px solid var(--border);
@@ -571,7 +582,7 @@ section { padding: 6rem 0; }
 
 /* Shared project actions */
 .project-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem; }
-.featured-info .project-actions { margin-top: 1.25rem; }
+.featured-info .project-actions { margin-top: 1.6rem; }
 
 /* ─── ACHIEVEMENTS ─────────────────────────────────────── */
 .achievements { background: var(--bg-2); }
