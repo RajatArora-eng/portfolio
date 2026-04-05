@@ -380,9 +380,9 @@ section { padding: 6rem 0; }
     gap: 0.5rem;
 }
 .tag {
-    background: rgba(88,166,255,0.07);
-    border: 1px solid rgba(88,166,255,0.2);
-    color: var(--accent);
+    background: rgba(251,146,60,0.1);
+    border: 1px solid rgba(251,146,60,0.3);
+    color: #fb923c;
     padding: 0.28rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -390,18 +390,18 @@ section { padding: 6rem 0; }
     transition: border-color 0.2s, background 0.2s;
 }
 .tag:hover {
-    background: rgba(88,166,255,0.14);
-    border-color: var(--accent);
+    background: rgba(251,146,60,0.18);
+    border-color: #fb923c;
 }
 
 .tag-deploy {
-    background: rgba(88,166,255,0.07);
-    border-color: rgba(88,166,255,0.2);
-    color: var(--accent);
+    background: rgba(251,146,60,0.1);
+    border-color: rgba(251,146,60,0.3);
+    color: #fb923c;
 }
 .tag-deploy:hover {
-    background: rgba(88,166,255,0.14);
-    border-color: var(--accent);
+    background: rgba(251,146,60,0.18);
+    border-color: #fb923c;
 }
 
 /* ─── PROJECTS ─────────────────────────────────────────── */
@@ -583,6 +583,25 @@ section { padding: 6rem 0; }
 /* Shared project actions */
 .project-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem; }
 .featured-info .project-actions { margin-top: 1.6rem; }
+
+/* GitHub CTA box */
+.github-cta {
+    margin-top: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+.github-cta-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-1);
+}
 
 /* ─── ACHIEVEMENTS ─────────────────────────────────────── */
 .achievements { background: var(--bg-2); }
